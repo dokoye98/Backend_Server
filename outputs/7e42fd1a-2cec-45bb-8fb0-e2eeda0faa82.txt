@@ -1,0 +1,23 @@
+Ready to receive input:
+Token{key=LITERAL, value='7'}
+Token{key=MULTIPLICATION, value='*'}
+Token{key=LITERAL, value='6'}
+AST after optimization: MultiplicationNode(*): Integer
+  |
+  *-- Literal("7") : String
+  *-- Literal("6") : String
+t0 = 0x7 (7)
+t1 = 0x6 (6)
+t2 = t0 * t1
+LOAD R0, 7
+LOAD R1, 6
+MUL R2, R0 * R1
+Registers
+R0 = 7
+R1 = 6
+R2 = 42
+Variables:
+Assembly Code here:
+
+null
+Finished processing input.

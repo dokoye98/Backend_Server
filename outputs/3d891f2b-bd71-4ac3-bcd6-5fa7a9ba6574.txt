@@ -1,0 +1,43 @@
+Ready to receive input:
+Token{key=PRINT, value='print'}
+Token{key=LITERAL, value='jimmy'}
+AST after optimization: PrintStatement : void
+  |
+  +-- Literal("jimmy") : String
+t0 = "jimmy"
+call print, t0
+LOAD R0, "jimmy"
+CALL print, R0
+jimmy
+Registers
+R0 = jimmy
+Variables:
+Assembly Code here:
+
+section .data
+message db  'jimmy', 0;
+
+section .bss
+;
+
+section .text
+global _start            ;
+_start
+_start:
+    mov eax, message
+    push eax
+    call print
+    add esp, 4
+    mov eax, 1          ; exit call
+    xor ebx, ebx        ; exit code 0
+    int 0x80            ;  system call
+print:
+    mov edx, len        ; dynamic string len
+    mov ecx, [esp+4]    ; 
+    mov ebx, 1          ; File descriptor (stdout)
+    mov eax, 4          ;  call number -> sys_write
+    int 0x80            ; system call
+    ret                 ; Return from the function
+section .data
+len equ $ - message     ;length is automatically calculated
+Finished processing input.

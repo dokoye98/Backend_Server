@@ -1,0 +1,23 @@
+Ready to receive input:
+Token{key=LITERAL, value='6'}
+Token{key=ADDITION, value='+'}
+Token{key=LITERAL, value='6'}
+AST after optimization: AdditionNode(+): Integer
+  |
+  +-- Literal("6") : String
+  +-- Literal("6") : String
+t0 = 0x6 (6)
+t1 = 0x6 (6)
+t2 = t0 + t1
+LOAD R0, 6
+LOAD R1, 6
+ADD R2, R0 + R1
+Registers
+R0 = 6
+R1 = 6
+R2 = 12
+Variables:
+Assembly Code here:
+
+null
+Finished processing input.

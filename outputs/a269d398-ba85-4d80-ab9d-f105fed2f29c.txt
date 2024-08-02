@@ -1,0 +1,23 @@
+Ready to receive input:
+Token{key=LITERAL, value='9'}
+Token{key=DIVIDE, value='/'}
+Token{key=LITERAL, value='3'}
+AST after optimization: DivideNode(/): Integer
+  |
+  --- Literal("9") : String
+  --- Literal("3") : String
+t0 = 0x9 (9)
+t1 = 0x3 (3)
+t2 = t0 / t1
+LOAD R0, 9
+LOAD R1, 3
+DIV R2, R0 / R1
+Registers
+R0 = 9
+R1 = 3
+R2 = 3
+Variables:
+Assembly Code here:
+
+null
+Finished processing input.

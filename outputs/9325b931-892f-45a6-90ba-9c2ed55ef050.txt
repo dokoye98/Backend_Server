@@ -1,0 +1,114 @@
+Ready to receive input:
+Token{key=NUM_VAR, value='a'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='12'}
+Token{key=NUM_VAR, value='b'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='44'}
+Token{key=NUM_VAR, value='c'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=NUM_VAR, value='a'}
+Token{key=MULTIPLICATION, value='*'}
+Token{key=NUM_VAR, value='b'}
+Token{key=PRINT, value='print'}
+Token{key=LITERAL, value='c'}
+Starting parse process with tokens:
+MulVarEquals (*): Integer
+  |
+  +-- Variable(c)
+  +-- VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("12") : String
+  +-- VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("44") : String
+Analyzing semantics for AST: MulVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("12") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("44") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("12") : String
+Checking expression: Literal("12") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("44") : String
+Checking expression: Literal("44") : String
+Expression is a LiteralNode
+t0 = 0xc (12)
+a = t0
+t1 = 0x2c (44)
+b = t1
+t2 = a
+t3 = b
+t4 = t2*t3
+c = t4
+call print, c
+: LOAD R0, 12
+: STORE a , R0
+: LOAD R1, 44
+: STORE b , R1
+: MOV R2, a
+: MOV R3, b
+: MUL R4, R2 , R3
+: MOV c, R4
+: CALL print, c
+528
+Registers: 
+R0 = 12
+R4 = 528
+R6 = 0
+R5 = 0
+R1 = 44
+R3 = 44
+R2 = 12
+Variables: 
+a = 12
+b = 44
+c = 528
+Memory: 
+
+Assembly Code here:
+
+section .data
+a dd 12
+b dd 44
+c dd 0
+buffer db 'Result: ', 0
+buffer_len equ $ - buffer
+num_str db '0000000000', 0
+num_len equ 10
+section .text
+global _start
+_start:
+    mov eax, [a]
+    mov ebx, [b]
+    imul eax, ebx
+    mov [c], eax
+    mov ecx, num_len
+    mov esi, c
+    mov eax, [esi]
+    mov ebx, 10
+convert_loop:
+    xor edx, edx
+    div ebx
+    add dl, '0'
+    dec ecx
+    mov [num_str + ecx], dl
+    test eax, eax
+    jnz convert_loop
+    mov eax, 4
+    mov ebx, 1
+    mov edx, num_len
+    mov ecx, num_str
+    int 0x80
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+Finished processing input.

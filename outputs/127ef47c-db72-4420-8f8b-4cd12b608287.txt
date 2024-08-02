@@ -1,0 +1,31 @@
+Ready to receive input:
+Token{key=NUM_VAR, value='a'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='13'}
+Token{key=NUM_VAR, value='b'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='91'}
+Starting parse process with tokens:
+VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("13") : String
+VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("91") : String
+UnknownNode{errorMessage='Index 6 out of bounds for length 6'}
+Analyzing semantics for AST: UnknownNode
+UnknownNode: Index 6 out of bounds for length 6
+Registers: 
+R1 = 0
+R0 = 0
+R3 = 0
+R4 = 0
+R2 = 0
+R5 = 0
+R6 = 0
+Variables: 
+Memory: 
+
+Finished processing input.

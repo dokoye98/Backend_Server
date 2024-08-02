@@ -1,0 +1,55 @@
+Ready to receive input:
+Token{key=VARIABLE, value='dogs'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='Luka'}
+Token{key=PRINT, value='print'}
+Token{key=LITERAL, value='dogs'}
+AST after optimization: PrintVariableNode(print dogs):
+  |
+  +-- Variable("dogs")
+  +-- Literal("Luka") : String : LiteralNode
+dogs = "Luka"
+t0 = dogs
+call print, t0
+LOAD R0, "Luka"
+STORE R0, dogs
+LOAD R0, dogs
+CALL print, R0
+Luka
+Registers
+R0 = Luka
+Variables:
+dogs = Luka
+Assembly Code here:
+
+section .data
+dogs db 'Luka', 0
+
+section .bss
+;
+
+section .text
+global _start
+_start:
+    ; Load the address of the variable into EAX
+    mov eax, dogs
+    ; Push the address onto the stack
+    push eax
+    ; Call the print function
+    call print
+    ; Clean up the stack
+    add esp, 4
+    ; Exit the program
+    mov eax, 1          ; System call number for exit
+    xor ebx, ebx        ; Exit code 0
+    int 0x80            ; Make the system call
+
+print:
+    mov edx, 4       ; Length of the string
+    mov ecx, [esp+4]    ; Pointer to the string on the stack
+    mov ebx, 1          ; File descriptor (stdout)
+    mov eax, 4          ; System call number for sys_write
+    int 0x80            ; Make the system call
+    ret                 ; Return from the function
+
+Finished processing input.

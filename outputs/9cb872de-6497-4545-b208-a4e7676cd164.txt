@@ -1,0 +1,18 @@
+Ready to receive input:
+Token{key=ASSIGN_PRINT, value='printer'}
+Starting parse process with tokens:
+UnknownNode{errorMessage='Index 1 out of bounds for length 1'}
+Analyzing semantics for AST: UnknownNode
+UnknownNode: Index 1 out of bounds for length 1
+Registers: 
+R2 = 0
+R1 = 0
+R3 = 0
+R4 = 0
+R5 = 0
+R6 = 0
+R0 = 0
+Variables: 
+Memory: 
+
+Finished processing input.

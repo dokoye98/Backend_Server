@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="SemanticTests.SemanticTreeTest" time="0.031" tests="13" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\dwayn\IdeaProjects\CompilerWebCloud\target\test-classes;C:\Users\dwayn\IdeaProjects\CompilerWebCloud\target\classes;C:\Users\dwayn\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\dwayn\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.2\junit-platform-suite-api-1.8.2.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\dwayn\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+    <property name="sun.java.command" value="C:\Users\dwayn\AppData\Local\Temp\surefire14782765121196269834\surefirebooter-20240731224310040_3.jar C:\Users\dwayn\AppData\Local\Temp\surefire14782765121196269834 2024-07-31T22-43-09_938-jvmRun1 surefire-20240731224310040_1tmp surefire_0-20240731224310040_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\dwayn\IdeaProjects\CompilerWebCloud\target\test-classes;C:\Users\dwayn\IdeaProjects\CompilerWebCloud\target\classes;C:\Users\dwayn\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\dwayn\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-suite-api\1.8.2\junit-platform-suite-api-1.8.2.jar;C:\Users\dwayn\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\dwayn\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\dwayn"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-01-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\dwayn\IdeaProjects\CompilerWebCloud"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\dwayn\AppData\Local\Temp\surefire14782765121196269834\surefirebooter-20240731224310040_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.2+13-LTS-58"/>
+    <property name="user.name" value="dwayn"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\dwayn\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\dwayn\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.2"/>
+    <property name="user.dir" value="C:\Users\dwayn\IdeaProjects\CompilerWebCloud"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Users\dwayn\Downloads\kotlin-compiler-1.9.21\kotlinc\bin\kotlinc;%JAVA_HOME%;C:\Program Files (x86)\Maven\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\dwayn\AppData\Local\Microsoft\WindowsApps;C:\Users\dwayn\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\dwayn\AppData\Roaming\npm;C:\Users\dwayn\.dotnet\tools;C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.5\bin;C:\Users\dwayn\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\dwayn\.dotnet\tools;C:\Program Files\JetBrains\DataGrip 2023.3.4\bin;;C:\Program Files\JetBrains\IntelliJ IDEA 2023.3.3\bin;;C:\Program Files (x86)\Maven\apache-maven-3.9.6-bin\apache-maven-3.9.6\bin\mvn.cmd;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.2+13-LTS-58"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testAnalyzeMulVarEquals" classname="SemanticTests.SemanticTreeTest" time="0.004">
+    <system-out><![CDATA[Analyzing semantics for AST: MulVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("2") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("4") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("2") : String
+Checking expression: Literal("2") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("4") : String
+Checking expression: Literal("4") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="undefinedVariableTest" classname="SemanticTests.SemanticTreeTest" time="0.003">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("10") : String
+Checking expression: Literal("10") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: PrintStatementNode
+PrintStatementNode: Variable("b") : String
+Checking expression: Variable("b") : String
+Expression is a VariableNode: b
+]]></system-out>
+  </testcase>
+  <testcase name="simpleVariableAssignment" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("12") : String
+Checking expression: Literal("12") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeDivVarEquals" classname="SemanticTests.SemanticTreeTest" time="0.002">
+    <system-out><![CDATA[Analyzing semantics for AST: DivVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("8") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("2") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("8") : String
+Checking expression: Literal("8") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("2") : String
+Checking expression: Literal("2") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzePrintStatement" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: PrintStatementNode
+PrintStatementNode: Literal("hello") : String
+Checking expression: Literal("hello") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeUndefinedVariableUse" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: c, AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+Checking expression: AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+Unrecognised expression: AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+Unrecognised expression
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeBinaryAssignNode" classname="SemanticTests.SemanticTreeTest" time="0.0">
+    <system-out><![CDATA[Analyzing semantics for AST: AddVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("5") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("10") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("5") : String
+Checking expression: Literal("5") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("10") : String
+Checking expression: Literal("10") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="negativeNodeAssignments" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("10") : String
+Checking expression: Literal("10") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: PrintStatementNode
+PrintStatementNode: Variable("a") : String
+Checking expression: Variable("a") : String
+Expression is a VariableNode: a
+]]></system-out>
+  </testcase>
+  <testcase name="variableAssignmentTest" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("10") : String
+Checking expression: Literal("10") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeSimpleVariableAssignment" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("10") : String
+Checking expression: Literal("10") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeSubVarEquals" classname="SemanticTests.SemanticTreeTest" time="0.001">
+    <system-out><![CDATA[Analyzing semantics for AST: SubVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("3") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("1") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("3") : String
+Checking expression: Literal("3") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("1") : String
+Checking expression: Literal("1") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="testAnalyzeBinaryVarExtended" classname="SemanticTests.SemanticTreeTest" time="0.003">
+    <system-out><![CDATA[Analyzing semantics for AST: AddVarExtended
+BinaryVarExtended: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("2") : String
+VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("3") : String
+AddVarExtended (+): Integer
+  |
+  +-- Variable(a)
+  +-- Variable(b)
+Checking expression: Literal("2") : String
+Expression is a LiteralNode
+Checking expression: Literal("3") : String
+Expression is a LiteralNode
+]]></system-out>
+  </testcase>
+  <testcase name="incompatibleNodes" classname="SemanticTests.SemanticTreeTest" time="0.002">
+    <system-out><![CDATA[Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("5") : String
+Checking expression: Literal("5") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("3") : String
+Checking expression: Literal("3") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: c, AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+Checking expression: AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+Unrecognised expression: AdditionNode(+): Integer
+  |
+  --- Variable("a") : String
+  --- Variable("b") : String
+]]></system-out>
+  </testcase>
+</testsuite>
