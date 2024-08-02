@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 
 app.use('/compiler',compiler)
 
+app.get('/', (req, res) => {
+    console.log('Root URL accessed');
+    res.send('Welcome to the Compiler API');
+})
 
 app.listen(3001, () => {
     console.log(`Server is running on port 3001`)
