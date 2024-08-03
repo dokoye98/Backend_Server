@@ -2,8 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const {restart} = require("nodeman")
 const cors = require('cors');
-
-
+const dotenv = require("dotenv")
+dotenv.config()
 const app = express()
 
 app.use(cors())
@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Compiler API');
 })
 
-app.listen(3001, () => {
-    console.log(`Server is running on port 3001`)
+app.listen(process.env.config||3001, () => {
+    console.log(`Server is running`)
 })
