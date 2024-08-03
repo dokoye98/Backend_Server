@@ -62,7 +62,9 @@ router.post('/compile', (req, res) => {
 });
 
 router.get('/output/:id', (req, res) => {
+    
     const outputId = req.params.id;
+    console.log("output: "+req.params.id)
     const outputFilePath = path.join(outputDir, `${outputId}.txt`);
     if (fs.existsSync(outputFilePath)) {
         const output = fs.readFileSync(outputFilePath, 'utf-8');
@@ -73,6 +75,7 @@ router.get('/output/:id', (req, res) => {
 });
 
 router.get('/compiled-ids', (req, res) => {
+    
     const compiledIds = JSON.parse(fs.readFileSync(idsFilePath));
     res.json({ compiledIds });
 });
