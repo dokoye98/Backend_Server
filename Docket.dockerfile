@@ -2,5 +2,5 @@ FROM alpine
 RUN apk add --update nodejs npm
 COPY . /src
 WORKDIR /src
-EXPOSE 3000
+EXPOSE 3001
 ENTRYPOINT ["node", "./app.js"]
