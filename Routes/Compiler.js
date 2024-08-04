@@ -22,8 +22,9 @@ router.post('/compile', (req, res) => {
     console.log('Received code:', input)
     const stringCode = String(input)
 
-    const jarPath = path.join('C:', 'Users', 'dwayn', 'OneDrive', 'Desktop', 'WebApp', 'server', 'target', 'CompilerWebCloud-1.0-SNAPSHOT.jar')
+    const jarPath = path.join('/usr/src/app', 'CompilerWebCloud-1.0-SNAPSHOT.jar')
     const compiler = spawn('java', ['-jar', jarPath])
+
 
     let output = ''
     compiler.stdout.on('data', (data) => {
