@@ -1,0 +1,114 @@
+Ready to receive input:
+Token{key=NUM_VAR, value='a'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='12'}
+Token{key=NUM_VAR, value='b'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=LITERAL, value='55'}
+Token{key=NUM_VAR, value='c'}
+Token{key=VAR_ASSIGN, value='='}
+Token{key=NUM_VAR, value='a'}
+Token{key=ADDITION, value='+'}
+Token{key=NUM_VAR, value='b'}
+Token{key=PRINT, value='print'}
+Token{key=LITERAL, value='c'}
+Starting parse process with tokens:
+AddVarEquals (+): Integer
+  |
+  +-- Variable(c)
+  +-- VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("12") : String
+  +-- VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("55") : String
+Analyzing semantics for AST: AddVarEquals
+BinaryAssignNode: VariableAssignment : void
+  |
+  +-- Variable(a)
+  +-- Literal("12") : String, VariableAssignment : void
+  |
+  +-- Variable(b)
+  +-- Literal("55") : String
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: a, Literal("12") : String
+Checking expression: Literal("12") : String
+Expression is a LiteralNode
+Analyzing semantics for AST: VariableAssignmentNode
+VariableAssignmentNode: b, Literal("55") : String
+Checking expression: Literal("55") : String
+Expression is a LiteralNode
+t0 = 1100 (12)
+a = t0
+t1 = 110111 (55)
+b = t1
+t2 = a
+t3 = b
+t4 = t2+t3
+c = t4
+call print, c
+LOAD R0, "1100"
+STORE a , R0
+LOAD R1, "110111"
+STORE b , R1
+MOV R2, a
+MOV R3, b
+ADD R4, R2 , R3
+MOV c, R4
+CALL print, c
+1000011
+Registers: 
+R0 = 1100
+R4 = 1000011
+R6 = 0
+R5 = 0
+R1 = 110111
+R3 = 110111
+R2 = 1100
+Variables: 
+a = 1100
+b = 110111
+c = 1000011
+Memory: 
+
+Assembly Code here:
+
+section .data
+a dd 12
+b dd 55
+c dd 0
+buffer db 'Result: ', 0
+buffer_len equ $ - buffer
+num_str db '0000000000', 0
+num_len equ 10
+section .text
+global _start
+_start:
+    mov eax, [a]
+    mov ebx, [b]
+    add eax, ebx
+    mov [c], eax
+    mov ecx, num_len
+    mov esi, c
+    mov eax, [esi]
+    mov ebx, 10
+convert_loop:
+    xor edx, edx
+    div ebx
+    add dl, '0'
+    dec ecx
+    mov [num_str + ecx], dl
+    test eax, eax
+    jnz convert_loop
+    mov eax, 4
+    mov ebx, 1
+    mov edx, num_len
+    mov ecx, num_str
+    int 0x80
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+Finished processing input.

@@ -17,6 +17,6 @@ app.get('/', (req, res) => {
     res.send('Welcome to the Compiler API');
 })
 
-app.listen(process.env.PORT||3001, () => {
+app.listen(3001, () => {
     console.log(`Server is running`)
 })
