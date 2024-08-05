@@ -1,0 +1,72 @@
+Ready to receive input:
+Token{key=LITERAL, value='5'}
+Token{key=ADDITION, value='+'}
+Token{key=LITERAL, value='6'}
+Starting parse process with tokens:
+AdditionNode(+): Integer
+  |
+  --- Literal("5") : String
+  --- Literal("6") : String
+Analyzing semantics for AST: AdditionNode
+Checking expression: Literal("5") : String
+Expression is a LiteralNode
+Checking expression: Literal("6") : String
+Expression is a LiteralNode
+BinaryOperationNode: Literal("5") : String, Literal("6") : String
+t0 = 101 (5)
+t1 = 110 (6)
+t2 = t0 + t1
+LOAD R0, "101"
+LOAD R1, "110"
+ADD R2, R0 , R1
+MOV result, R2
+CALL print, R2
+1011
+Registers: 
+R3 = 0
+R5 = 0
+R4 = 0
+R0 = 101
+R2 = 1011
+R6 = 0
+R1 = 110
+Variables: 
+result = 1011
+Memory: 
+
+Assembly Code here:
+
+section .data
+result dd 0
+buffer db 'Result: ', 0
+buffer_len equ $ - buffer
+num_str db '0000000000', 0
+num_len equ 10
+section .text
+global _start
+_start:
+    mov eax, 5
+    add eax, 6
+    mov [result], eax
+    mov ecx, num_len
+    mov esi, result
+    mov eax, [esi]
+    mov ebx, 10
+convert_loop:
+    xor edx, edx
+    div ebx
+    add dl, '0'
+    dec ecx
+    mov [num_str + ecx], dl
+    test eax, eax
+    jnz convert_loop
+    mov eax, 4
+    mov ebx, 1
+    mov edx, num_len
+    mov ecx, num_str
+    int 0x80
+    mov eax, 1
+    xor ebx, ebx
+    int 0x80
+
+Finished processing input.
